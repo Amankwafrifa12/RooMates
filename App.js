@@ -1,5 +1,5 @@
 import react, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button} from 'react-native';
 import Design from './components/top';
 import Bottoms from './components/bottom';
 
