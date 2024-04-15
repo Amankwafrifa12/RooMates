@@ -1,19 +1,30 @@
 import react, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, Button} from 'react-native';
+import { StyleSheet, Text, View, TextInput} from 'react-native';
 import Design from './components/top';
 import Bottoms from './components/bottom';
 
 export default function App() {
-  
+  const clickHandler = () => {
+    setName('Nana Yaw');
+    setAge(30)
+    
+  }
+  const [name, setName] = useState('Kwasi');
+  const [age, setAge] = useState(20);
   return (
      
     <View style={styles.container}>  
     <Design /> 
     <Bottoms />
-    <Button title="Sign Up" />
-    <Button title="Login" />
-
-    
+      <Text>my name is {name} and I am {age} years</Text>  
+      <TextInput 
+      placeholder="enter name"
+      style={styles.input}
+      onChangeText={(val) => setName(val) }/>
+       <TextInput 
+      placeholder="enter name"
+      style={styles.input}
+      onChangeText={(val) => setAge(val) }/>
       
            
     </View>
